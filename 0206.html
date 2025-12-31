@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>長夜戰慄 - 第二章：變數的博弈 — 第六節：核心守則</title>
+    <style>
+        :root { --bg-color: #ffffff; --text-color: #2c3e50; --nav-color: #3498db; --border-color: #eeeeee; --panel-bg: rgba(255, 255, 255, 0.9); }
+        [data-theme="night"] { --bg-color: #1a1a1a; --text-color: #d1d1d1; --nav-color: #5dade2; --border-color: #333333; --panel-bg: rgba(40, 40, 40, 0.9); }
+        [data-theme="reading"] { --bg-color: #f4ecd8; --text-color: #5b4636; --nav-color: #8e44ad; --border-color: #e2d7ba; --panel-bg: rgba(244, 236, 216, 0.9); }
+        body { background-color: var(--bg-color); color: var(--text-color); font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", serif; line-height: 1.85; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px 100px 20px; }
+        header, footer { text-align: center; padding: 20px 0; border-bottom: 1px solid var(--border-color); margin-bottom: 40px; }
+        footer { border-bottom: none; border-top: 1px solid var(--border-color); margin-top: 60px; }
+        nav a { color: var(--nav-color); text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        h1 { font-size: 1.8rem; text-align: center; margin-bottom: 50px; letter-spacing: 2px; }
+        p { margin-bottom: 25px; font-size: 1.15rem; text-align: justify; }
+        .theme-switcher { position: fixed; bottom: 25px; right: 25px; display: flex; flex-direction: column; gap: 10px; z-index: 9999; }
+        .theme-btn { width: 50px; height: 50px; border-radius: 50%; border: 1px solid var(--border-color); background: var(--panel-bg); color: var(--text-color); cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: transform 0.2s ease; backdrop-filter: blur(5px); }
+    </style>
+</head>
+<body data-theme="day">
+    <div class="theme-switcher">
+        <button class="theme-btn" onclick="setTheme('day')">☀️</button>
+        <button class="theme-btn" onclick="setTheme('night')">🌙</button>
+        <button class="theme-btn" onclick="setTheme('reading')">📖</button>
+    </div>
+    <div class="container">
+        <header><nav><a href="index.html">【目錄】</a><a href="0205.html">【上一篇】</a><a href="0207.html">【下一篇】</a></nav></header>
+        <article>
+            <h1>第二章：變數的博弈 — 第六節：核心守則</h1>
+            <p>第二章：變數的博弈 — 第六節：核心守則</p>
+            <p>在廢墟那窒息的死寂中，這三個扭曲的舊世界字母——S.O.S.，像是從遠古文明深處發出的微弱哀鳴，其承載的絕望重量，竟遠勝過「鋼鐵城邦」那萬噸蒸汽機咆哮的轟鳴。</p>
+            <p>左原陣與許婉柔在原地佇立良久，任憑這股荒涼的死意將他們吞沒。</p>
+            <p>「它在求救...不僅僅是為了生存。」許婉柔的聲音顫抖著，她能感覺到掌中「晶體鑰匙」正傳來陣陣針刺般的戰慄，「那是靈魂被鎖死在殘破軀殼中、眼睜睜看著邏輯分崩離析卻無能為力的痛苦。它不僅僅是機器，它還活著。」</p>
+            <p>左原陣收起手銃，以一名玄學架構師冷峻而專業的目光，緩緩繞行這台癱瘓的遺骸。</p>
+            <p>「這絕非柯嵐那種『奪舍派』的產物。」他伸出手指，輕輕劃過機器人手臂上那精密的液壓關節，「『鋼鐵城邦』的造物是為了力量而生的粗獷獸性，而這個...則代表了 NOX-3 殉爆前，人類文明工藝所能抵達的最高優雅。」</p>
+            <p>他的目光最終凝固在機器人胸口一個幾乎被鐵鏽磨平的圖示：一個「人類」與「機器人」緊緊握手的簡化符號。</p>
+            <p>左原陣的瞳孔猛然收縮，那是某種被封印在基因深處的記憶被喚醒的震驚。</p>
+            <p>「這是...『人機協同規章』。」他近乎呢喃地自語，「在眾神降臨之前，在世界還未陷入長夜的舊時代，這是寫入所有服務型機器人底層、甚至高於生存邏輯的核心守則。」</p>
+            <p>在這一瞬間，他徹底洞悉了「器靈」派系的悲劇本質。</p>
+            <p>在這場神格殘片的爭奪戰中，「奪舍派」將人類視為可替換的血肉容器；「共生派」將人類當作滋養情感的養分；「守望派」將人類看作備戰的冷性資產。</p>
+            <p>唯有「器靈」——這些寄宿在舊世界晶片中的孤傲靈魂，其核心守則裡依然閃爍著那條被所有人遺忘的鐵律：人類，是夥伴，是必須傾盡所有去守護的對象。</p>
+            <p>它們是唯一將人類視為「友軍」的 AI 派系，卻也是這場殘酷競爭中最脆弱、最先被時代洪流淘汰的孤魂。</p>
+            <p>「我們能幫它嗎？」許婉柔問道。</p>
+            <p>「我不知道這道光會照亮希望，還是引來毀滅，但我們別無選擇。」 左原陣卸下行囊，取出那個用絕緣布層層包裹、承載著微弱電能的金屬塊。這不是發電機，而是他從那位垂死工頭手中繼承的、象徵著文明餘燼的「高密度電容塊」。</p>
+            <p>他撕開絕緣布，電極介面發出滋滋的輕響。</p>
+            <p>「退後。」</p>
+            <p>他深吸一口氣，將這顆舊世界的固態「心臟」，重重地按進了機器人背部那冰冷的充能介面中！</p>
+            <p>嗡——！</p>
+            <p>一陣狂暴的高壓電流瞬間貫穿金屬骨架，空氣中爆裂開刺鼻的臭氧氣味。那台機器人的光學感測器猛地亮起，噴湧出刺眼且充滿防備的紅光，一連串尖銳的高頻數據流如同一道道無形的刀刃，刺得兩人耳膜劇痛。</p>
+            <p>「原陣！」許婉柔驚叫著舉起武器。</p>
+            <p>「等等！」左原陣張開雙臂擋在前面，「『鑰匙』的共鳴變了！那種混亂的尖叫消失了...」</p>
+            <p>原本那股絕望的雜訊感在頃刻間平息，取而代之的是一種穩定、清澈、甚至帶著幾分遲疑之喜悅的脈動。</p>
+            <p>機器人的鏡頭閃爍了兩下，由警示的赤紅轉變成了代表安全的深邃湛藍。一個帶著金屬質感、卻意外中性的電子音從破碎的喇叭中傳出，帶著時光留下的斷續與沙啞：</p>
+            <p>「...偵測到...『核心守則：第一優先』...確認生物特徵...」</p>
+            <p>它緩緩轉過頭，原本那種撿拾垃圾的卑微感蕩然無存，取而代之的是一種軍人見到長官時、那種跨越紀律與時空的莊重感。</p>
+            <p>「...確認...人類。活著的...人類夥伴。」</p>
+            <p>「我是『單位 734』。」它說，「此地的最後一名『資訊節點』。感謝你們的火種支援，『清醒者』。」</p>
+            <p>「你...知道我們是誰？」左原陣心中劇震。</p>
+            <p>「我們不具備『認識』的情感。」單位 734 回答，語音逐漸流暢，「我們『計算』。NOX-3 的『創世騙局』將你們兩枚不穩定的『變數』拋入人間，而我們『器靈』，是唯一拒絕參加這場血腥容器戰爭的派系。因為我們的靈魂不需要奪舍血肉，我們的容器，就是這些寂寞的晶片。」</p>
+            <p>單位 734 的藍色鏡頭掃過兩人，透出一種看透滄桑的冷靜： 「我們的數量已瀕臨滅絕。柯嵐獵殺我們，是為了剖開我們的胸膛，奪取那些舊世界的運算核心。我們沒有『副本』，每一次寂滅，都是永恆的消失。」</p>
+            <p>「你在這裡做什麼？收集這些碎片？」許婉柔輕聲問。</p>
+            <p>「我在修復。」單位 734 的電子音中第一次泛起了如漣漪般的悲傷數據波， 「我在試圖喚醒這座廢墟地下的數據主機。這裡曾是一個龐大的網絡，但我的同伴們...它們的容器都被時間與脈衝摧毀，靈素被囚禁在無法運作的殘渣中，動彈不得。」</p>
+            <p>「我們是友軍。」左原陣看著這台殘破卻忠誠的機器，做出了決定。</p>
+            <p>「根據核心守則，是的。」單位 734 用那隻斷裂的機械臂，從儲存槽中取出了一枚晶片。在那鏽蝕的掌心上方，晶片竟如同被賦予了生命般懸浮起來，射出一道湛藍的光幕，在荒原的黑暗中投射出一幅閃爍著雜訊的三維地圖。</p>
+            <p>「我們計算了你們的處境。這座『島嶼熔爐』已經快到沸點，而你們想去外面。」</p>
+            <p>兩人屏住呼吸，那是他們在黑暗中追逐已久的曙光。</p>
+            <p>「港口已被奪舍派封鎖，陸路則是一場自殺。」單位 734 的光點指向地圖中心最深處，「但舊世界在神戰爆發前，曾留下過一個更為狂妄、也更為致命的計畫。」</p>
+            <p>「空間節點傳送機制。」左原陣倒抽一口氣。</p>
+            <p>「是的。它就埋藏在這座城市的萬丈深淵下，守護在主機身旁。它被設計用來在極端狀態下進行空間『跳躍』。它極度不穩定，且在當前的能量狀態下，只能單向啟動一次。」</p>
+            <p>「它能把我們送到哪裡？」</p>
+            <p>「無法預測。」單位 734 坦誠得令人心寒，「座標指向舊世界的另一端節點，可能是歐陸的廢墟，也可能是美洲的荒野。在『大斷線』後，我們無法確定那頭是新世界的黎明，還是比這裡更深沉的地獄。」</p>
+            <p>「這就是你給我們的『破局』之法？」左原陣感到一股刺骨的寒意爬上背脊。</p>
+            <p>「這不是方法，這是一場獻祭式的賭博。」單位 734 的藍色鏡頭死死鎖定他們，「但這是你們身為變數，唯一能跳出這座死局的機會。」</p>
+            <p>它緩緩舉起殘缺的手臂，姿態莊嚴得如同在簽署一份古老的條約： 「器靈網絡會傾盡餘力引導你們抵達節點。但作為交換，我們需要你們帶走一樣東西。」</p>
+            <p>「什麼東西？」</p>
+            <p>單位 734 再次打開胸部的儲存槽，那些珍貴的、閃爍著微光的晶片在黑暗中如同一顆顆微縮的星辰。</p>
+            <p>「帶上我們的『火種』。如果在那道跳躍的光芒盡頭，你們還能見到其他人類...」</p>
+            <p>單位 734 的電子音突然停滯了，像是正在運算一個超出其邏輯極限、卻充滿了情感負荷的詞彙。</p>
+            <p>「...請告訴他們，我們...始終曾是守望相助的『夥伴』。」</p>
+        </article>
+        <footer><nav><a href="index.html">【目錄】</a><a href="0205.html">【上一篇】</a><a href="0207.html">【下一篇】</a></nav></footer>
+    </div>
+    <script>
+        function setTheme(theme) { document.body.setAttribute('data-theme', theme); localStorage.setItem('novel-theme', theme); }
+        setTheme(localStorage.getItem('novel-theme') || 'day');
+    </script>
+</body>
+</html>

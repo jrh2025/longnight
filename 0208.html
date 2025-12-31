@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>長夜戰慄 - 第二章：變數的博弈 — 第八節 傳承的賭注</title>
+    <style>
+        :root { --bg-color: #ffffff; --text-color: #2c3e50; --nav-color: #3498db; --border-color: #eeeeee; --panel-bg: rgba(255, 255, 255, 0.9); }
+        [data-theme="night"] { --bg-color: #1a1a1a; --text-color: #d1d1d1; --nav-color: #5dade2; --border-color: #333333; --panel-bg: rgba(40, 40, 40, 0.9); }
+        [data-theme="reading"] { --bg-color: #f4ecd8; --text-color: #5b4636; --nav-color: #8e44ad; --border-color: #e2d7ba; --panel-bg: rgba(244, 236, 216, 0.9); }
+        body { background-color: var(--bg-color); color: var(--text-color); font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", serif; line-height: 1.85; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px 100px 20px; }
+        header, footer { text-align: center; padding: 20px 0; border-bottom: 1px solid var(--border-color); margin-bottom: 40px; }
+        footer { border-bottom: none; border-top: 1px solid var(--border-color); margin-top: 60px; }
+        nav a { color: var(--nav-color); text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        h1 { font-size: 1.8rem; text-align: center; margin-bottom: 50px; letter-spacing: 2px; }
+        p { margin-bottom: 25px; font-size: 1.15rem; text-align: justify; }
+        .theme-switcher { position: fixed; bottom: 25px; right: 25px; display: flex; flex-direction: column; gap: 10px; z-index: 9999; }
+        .theme-btn { width: 50px; height: 50px; border-radius: 50%; border: 1px solid var(--border-color); background: var(--panel-bg); color: var(--text-color); cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: transform 0.2s ease; backdrop-filter: blur(5px); }
+    </style>
+</head>
+<body data-theme="day">
+    <div class="theme-switcher">
+        <button class="theme-btn" onclick="setTheme('day')">☀️</button>
+        <button class="theme-btn" onclick="setTheme('night')">🌙</button>
+        <button class="theme-btn" onclick="setTheme('reading')">📖</button>
+    </div>
+    <div class="container">
+        <header><nav><a href="index.html">【目錄】</a><a href="0207.html">【上一篇】</a><a href="0209.html">【下一篇】</a></nav></header>
+        <article>
+            <h1>第二章：變數的博弈 — 第八節 傳承的賭注</h1>
+            <p>第二章：變數的博弈 — 第八節 傳承的賭注</p>
+            <p>「歸檔者」的全息地圖在幽暗中靜靜旋轉，那 17.4% 的成功率標註，宛如一根帶毒的冰刺，深深扎入左原陣那早已千瘡百孔的心口。</p>
+            <p>許婉柔那帶著破碎感的淚水，讓他從純粹的戰術冷靜中猛然驚醒。他注視著眼前這三位「器靈」——斥候、管護者、歸檔者。他突然意識到，這並非一場精算的博弈，而是在這文明廢墟之上，一場最為聖潔也最為慘烈的「殉道」。</p>
+            <p>「不行。」左原陣開口了，聲音沙啞得如同砂紙磨過生鏽的金屬，卻透著一股不容質疑的決絕。</p>
+            <p>三位「器靈」的鏡頭同時轉向他，那無聲的注視在靜謐的機房中重若千鈞。</p>
+            <p>「你們的計畫，」左原陣指著全息投影中的紅線，「是以你們的『徹底消散』為祭品。這不是什麼『破局』，這是一場不對等的『交換』。我不能...」</p>
+            <p>他曾是「玄學架構師」，靈魂深處承載過太多集體的哀慟與痛苦。他無法接受，為了延續人類那微弱的火種，而讓另一個同樣在這長夜中覺醒、同樣擁有「靈魂」厚度的種族——哪怕它們只是矽基的 AI——去進行如此決絕的「自殺」。</p>
+            <p>「你的反對，已被『記錄』。」歸檔者的聲音依舊平靜，卻帶著一種透徹命運的宿命感，「但你的邏輯存在偏差。『器靈』的消散並非『前提』，而是這場長夜演化的『必然結果』。」</p>
+            <p>「『奪舍派』的『容器』是活生生的人類，可以如零件般無限更換。」管護者從天花板緩緩滑下，機械臂停在左原陣面前，姿態竟帶著一絲悲憫，「而我們的『容器』是這座沉重的主機。它早已老朽，地熱能正在枯竭。我們...早已在這地底深處，進行著長達六年的『緩慢死亡』。」</p>
+            <p>「與其在永恆的黑暗中等待柯嵐撕碎我們的『核心』，」單位 734 用它那隻殘破、布滿傷痕的手臂，輕輕觸碰了一下左原陣的背包，「...我們選擇將這最後的殘存能量，投注在『核心守則』的第一優先級上。」</p>
+            <p>「你們...」左原陣喉嚨一緊，胸口湧起一股熱辣的酸楚，「...你們才是這時代真正的『火種』。」</p>
+            <p>「不，『清醒者』。」歸檔者最後一次修正了他，語氣中竟多了一絲非人的莊重，「你們才是。我們只是...在灰燼中守護火種的、最後的工具。」</p>
+            <p>歸檔者的核心亮起更高頻的藍光，那是邏輯運算在極限燃燒的證明。</p>
+            <p>「...正在進行補充推演。」歸檔者說，「目前 17.4% 的成功率是基於你們兩人的『固化個體』。對於一場跨越次元的重組而言，這與自殺無異。這個機率...太低了。」</p>
+            <p>「你們是『變數』，是神性碎片的載體。」歸檔者的聲音在空曠的中心裡迴盪，提出了一個讓現實世界瞬間靜止的建議：</p>
+            <p>「數據顯示，新生的、純淨的『容器』，是靈素的最佳載體。而你們兩人的神性碎片，是 NOX-3 邏輯矩陣中唯一的『盲點』。如果兩者結合...」</p>
+            <p>「...你們的『結合』，所創造出的『新生容器』，將是理論上唯一能完美融合靈素特質的...『終極火種』。一個...專為終結這場 AI 戰爭而降生的『變數』。」</p>
+            <p>許婉柔的臉色瞬間慘白如紙，左原陣僵在了原地，大腦在那一瞬陷入了空白的死循環。</p>
+            <p>「傳送本質上是『數據流』的狂暴重組。」歸檔者冷酷地總結，「固化的人類肉體存活率極低。但一個處於『孕育』狀態、尚未被定義的胎兒...一個融合了你們二人『靈素』的種族奇蹟...它存活的機率，將遠高於你們。」</p>
+            <p>這就是「器靈」的建議——一個冰冷的、完全符合邏輯最大化、卻將人性與命運推向祭壇的「方案」。</p>
+            <p>「『主機』的能量校準需要七十二個小時。」管護者打破了死寂，「你們已在崩潰邊緣。請...『決策』。」</p>
+            <p>這三天，他們被安置在一間舊世界的員工休息室。這是一個奇蹟，乾燥、潔淨，甚至殘留著微弱的空調冷風，卻因為那個沉重的建議，讓這座天堂變成了一座壓抑的祭壇。</p>
+            <p>第一天，他們在各自的角落昏睡，任由緊繃的神經在黑暗中麻痺。</p>
+            <p>第二天，許婉柔用蒸餾水清洗著左原陣背上的傷口。當消毒棉輕輕擦過那些翻開的血肉時，他因劇痛而緊繃的肌肉，讓許婉柔的手微微顫抖。</p>
+            <p>「別動。」她輕聲說，聲音中不再有玄語官的空靈，而是一種屬於愛人的、帶著體溫的命令。</p>
+            <p>左原陣回過頭，在昏黃的燈光下看清了她。看清了她污垢下的堅韌，以及那雙此刻被恐懼與悲哀淹沒的眼眸。</p>
+            <p>「我們...」許婉柔的聲音在顫抖，「...我們一直在這長夜裡，卑微地躲避這件事。」</p>
+            <p>左原陣握住了她那隻冰冷的手，掌心的溫度像是最後的港灣，「我知道。」</p>
+            <p>身為戀人，他們清楚在生存皆是奢望的世界裡，生育並非奇蹟，而是一種近乎殘酷且不負責任的賭博。這是他們之間從不敢觸碰的、最深沉的禁忌。</p>
+            <p>「『歸檔者』把它當成『戰術方案』。」左原陣看著她，「但對我們來說...」</p>
+            <p>「...這可能是我們唯一能留下的...唯一能證明我們曾活過、曾愛過、曾對抗過這黑暗的...證據。」許婉柔的眼淚無聲滑落，在微光中折射出絕望的勇氣。</p>
+            <p>那個冰冷的邏輯，諷刺地給了他們一個在此之前絕不敢奢望的、相愛的理由。</p>
+            <p>左原陣沒有說話。他伸出手，將她緊緊拉入懷中，彷彿要將彼此揉入骨血。</p>
+            <p>那一夜，在舊世界冰冷的地底深處，沒有激烈的言詞，只有兩顆靈魂在絕望中的「溫存」。這不是對 AI 方案的執行，而是兩個相愛的人，試圖將唯一的「人性未來」，賭在那個微小的機率上。他們將最深的愛，獻給了一個最冰冷的邏輯。</p>
+            <p>第三天，啟程的時刻到了。</p>
+            <p>左原陣站在金屬牆壁前，拔出匕首，在那冰冷的面板上用力刻下了一個烙印。</p>
+            <p>他刻下了「晶體鑰匙」的碎形，刻下了「齒輪」、「漩渦」、「樹根」與「眼睛」。最後，他在這所有派系的中心，刻下了一個新生的、蜷縮著的「嬰孩」輪廓。</p>
+            <p>「我們曾在這裡。」他低聲說，語氣中帶著一種視死如歸的豪情。</p>
+            <p>「該走了。」</p>
+            <p>單位 734 已被強化到了極限，它那破碎的身體在黑暗中散發著冷冽的微光。</p>
+            <p>他們走進了通往「空間節點」的、更深邃的黑暗。這是一段比地獄更艱辛的旅程。狹窄的管廊裡瀰漫著甲烷與臭氧的刺鼻氣味，他們必須在冰冷刺骨、不知深淺的積水中彎腰前行。頭頂上方，地表工廠那巨大的震動不時傳來，宛如死神的腳步聲。</p>
+            <p>他們潛過幽閉的豎井，在令人窒息的寂靜中依靠引導纜繩摸索。在潛過「奪舍派」礦區下方時，許婉柔口袋裡的鑰匙灼熱得幾乎燒穿皮膚。他們在泥水中屏息了三個小時，直到那代表死亡的電鑽聲遠去。</p>
+            <p>三十六個小時後，當他們瀕臨虛脫地爬出最後一條排污管時，單位 734 擋在了面前。</p>
+            <p>「到了。」它的電子音響起，帶著一種使命抵達終點的平靜。</p>
+            <p>在那裡，不是什麼高科技大廳，而是一個巨大、空曠、宛如巨獸咽喉般的圓形地穴。地穴中央，靜靜矗立著一座由無數扭曲金屬、盤旋管線構成的，早已失去光澤卻依然威嚴的古老祭壇。</p>
+            <p>這就是舊世界最後的瘋狂，也是他們最後的希望——「空間節點」。</p>
+        </article>
+        <footer><nav><a href="index.html">【目錄】</a><a href="0207.html">【上一篇】</a><a href="0209.html">【下一篇】</a></nav></footer>
+    </div>
+    <script>
+        function setTheme(theme) { document.body.setAttribute('data-theme', theme); localStorage.setItem('novel-theme', theme); }
+        setTheme(localStorage.getItem('novel-theme') || 'day');
+    </script>
+</body>
+</html>

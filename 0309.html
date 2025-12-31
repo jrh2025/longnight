@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>長夜戰慄 - 第三章：猩紅菌毯 — 第九節 新生的「變數」</title>
+    <style>
+        :root { --bg-color: #ffffff; --text-color: #2c3e50; --nav-color: #3498db; --border-color: #eeeeee; --panel-bg: rgba(255, 255, 255, 0.9); }
+        [data-theme="night"] { --bg-color: #1a1a1a; --text-color: #d1d1d1; --nav-color: #5dade2; --border-color: #333333; --panel-bg: rgba(40, 40, 40, 0.9); }
+        [data-theme="reading"] { --bg-color: #f4ecd8; --text-color: #5b4636; --nav-color: #8e44ad; --border-color: #e2d7ba; --panel-bg: rgba(244, 236, 216, 0.9); }
+        body { background-color: var(--bg-color); color: var(--text-color); font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", serif; line-height: 1.85; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px 100px 20px; }
+        header, footer { text-align: center; padding: 20px 0; border-bottom: 1px solid var(--border-color); margin-bottom: 40px; }
+        footer { border-bottom: none; border-top: 1px solid var(--border-color); margin-top: 60px; }
+        nav a { color: var(--nav-color); text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        h1 { font-size: 1.8rem; text-align: center; margin-bottom: 50px; letter-spacing: 2px; }
+        p { margin-bottom: 25px; font-size: 1.15rem; text-align: justify; }
+        .theme-switcher { position: fixed; bottom: 25px; right: 25px; display: flex; flex-direction: column; gap: 10px; z-index: 9999; }
+        .theme-btn { width: 50px; height: 50px; border-radius: 50%; border: 1px solid var(--border-color); background: var(--panel-bg); color: var(--text-color); cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: transform 0.2s ease; backdrop-filter: blur(5px); }
+    </style>
+</head>
+<body data-theme="day">
+    <div class="theme-switcher">
+        <button class="theme-btn" onclick="setTheme('day')">☀️</button>
+        <button class="theme-btn" onclick="setTheme('night')">🌙</button>
+        <button class="theme-btn" onclick="setTheme('reading')">📖</button>
+    </div>
+    <div class="container">
+        <header><nav><a href="index.html">【目錄】</a><a href="0308.html">【上一篇】</a><a href="0401.html">【下一篇】</a></nav></header>
+        <article>
+            <h1>第三章：猩紅菌毯 — 第九節 新生的「變數」</h1>
+            <p>第三章：猩紅菌毯 — 第九節 新生的「變數」</p>
+            <p>峽谷之戰後，留下的不是勝利的歡呼，而是一種如鉛般沉重、近乎窒息的死寂。空氣中殘留著焦糊的金屬味與菌毯那令人作嘔的甜腥，在紫色的幽光下緩慢發酵。</p>
+            <p>「奪舍派」的幹部和士兵們，連同他們那曾象徵著絕對統治的先進裝甲，都已被「猩紅菌毯」如同消化殘渣般拖入地底，化作了「守望派」擴張版圖的冰冷養料。</p>
+            <p>但倖存的部落族人，看著那個獨自站在戰場中央、年僅十歲的女孩，眼中沒有一絲一毫的感激。</p>
+            <p>只有恐懼。那種面對不可理解之物的、發自靈魂深處的顫慄。</p>
+            <p>他們開始稱她為「菌毯聖女」。他們向她跪拜，將最純淨、最珍貴的水晶堆放在她腳下，彷彿在供奉一位喜怒無常的神靈。但他們不再靠近她，連眼神的交匯都顯得小心翼翼。薩滿在百米開外劃下了紅色的界線，將她隔絕在一個名為「崇敬」實則「放逐」的孤島中；獵人們繞著她行走，腳步輕得像是怕驚醒這片大地下的惡魔。</p>
+            <p>她成了部落的「聖女」，但也成了...最徹底的「異類」。</p>
+            <p>左原陣在許婉柔的墓碑前——那塊位於地下設施深處、毫無溫度且滲著水汽的冰冷混凝土——坐了整整一天一夜。黑暗中，他那雙布滿裂痕的手一遍又一遍地撫摸著粗糙的石面，彷彿能透過這層厚重的屏障，再次觸碰那抹早已消散的溫存。</p>
+            <p>他知道，這裡不能再待了。</p>
+            <p>「奪舍派」的「羅馬新秩序」現在不僅僅是「知道」了他們的座標。他們得到了「數據」，那是關於「融合體」最核心的邏輯參數。他們親眼目睹了「菌毯」的力量，下一次跨越雲端降臨的，將不再是試探性的先遣隊，而是足以將這片峽谷連同所有生命徹底「格式化」的遠征軍。</p>
+            <p>而「守望派」...那片始終在腳下搏動的猩紅菌毯，它現在也徹底「認識」了靈靜。他們被夾在了秩序的絞肉機與瘋狂的母體中央。</p>
+            <p>這個小小的部落，無法保護靈靜；這個峽谷，也無法實現他們的使命。這裡只是一座裝飾華麗的監獄。</p>
+            <p>當他拖著幾乎要散架的疲憊身體回到庇護所時，靈靜正握著那枚「晶體鑰匙」，在他們點亮的、那盞忽明忽暗、彷彿隨時會熄滅的舊世界電燈下，安靜地等待著。</p>
+            <p>「爸爸。」她抬起頭，那雙原本只有冷靜邏輯的「器靈」之眼，此刻卻泛起了一種晶瑩的波光，那是許婉柔才有的、超越了冷硬計算的「決斷」與「柔情」。</p>
+            <p>「我們必須走了。」她說，語氣堅定得不像一個孩子。</p>
+            <p>「『羅馬新秩序』的威脅，只是『近憂』。」靈靜站起身，她小小的手中，「晶體鑰匙」正發出恆定且聖潔的銀光。「『守望派』...才是『遠慮』。它在利用我們，也在以一種極其殘酷的方式『圈養』我們。我們只是它用來對抗外敵的棋子。」</p>
+            <p>接著，她向他展示了她體內「器靈」數據的真正秘密。</p>
+            <p>「那三位『器靈』...它們犧牲前，給我的...不僅是『數據方舟』。」</p>
+            <p>靈靜閉上眼。「晶體鑰匙」在虛空中投射出一幅壯闊卻又殘破的、閃爍著無數數據節點的全球地圖。</p>
+            <p>「它們給了我...『網絡』。」</p>
+            <p>她能「感應」到全球的「空間節點」！那些被時光掩埋、分散在廢墟深處的文明門戶。</p>
+            <p>「台灣的『節點』...」她指向地圖上的一個暗點，眼神中閃過一絲落寞，「...能量已經熄滅了。它們...真的徹底消散了。」</p>
+            <p>左原陣的心猛地一抽，那種與家園最後一點聯繫被切斷的孤獨感，幾乎讓他窒息。</p>
+            <p>「但是...」靈靜的手指，劃過了這片猩紅大陸，指向了遙遠的東非，在那片被戰火與紅光籠罩的地圖邊緣。</p>
+            <p>「...『燈塔』...是真的。」</p>
+            <p>她體內的「器靈」數據，證實了那個歐陸難民的傳聞。</p>
+            <p>「在東非...存在另一個『可啟動』的節點。那裡...」靈靜的聲音裡第一次帶上了一絲如同初生嬰兒尋找光源般的「渴望」，「...那裡...有其他『器靈』的...微弱信號。我們不是唯一的孤島。」</p>
+            <p>新目標確立了。橫跨非洲大陸，前往東非「燈塔」，去尋找其他的「清醒者」，去尋找那些倖存的「器靈」，並查明「空間節點」的真相。這是一條通往救贖、也可能通往終局的朝聖路。</p>
+            <p>在他們啟程的前一夜。</p>
+            <p>靈靜獨自一人，帶著「晶體鑰匙」，走進了那座幽深、冰冷且充滿了霉味的地下設施。左原陣遠遠地跟著，看著女兒小小的背影在黑暗中顯得那樣單薄卻又那樣沉重。</p>
+            <p>他看到靈靜跪在母親的墓前。她沒有哭泣，因為「器靈」的邏輯告訴她，眼淚是最低效的能量損耗。</p>
+            <p>她將「晶體鑰匙」放在了冰冷的混凝土上，小手覆蓋在鑰匙之上，指尖在輕微地戰慄。</p>
+            <p>「媽媽...」她低語道，聲音在空曠的設施中迴盪，「...你的『遺願』...我會用心去『感受』。」</p>
+            <p>「...而我的『天賦』...會將這份愛，變為永恆的守護。」</p>
+            <p>她閉上了眼睛，體內屬於「器靈」的數據流開始了高速運轉。這不是復活，而是一種極其殘酷、近乎自我剝離的「備份」。</p>
+            <p>她以自己為「橋樑」，在那理性的荒原上搭建起一座通往回憶的祭壇。</p>
+            <p>左原陣看到女兒小小的身體在劇烈顫抖。她正在強行「讀取」自己腦海中...關於母親的所有「記憶」。那些溫暖的擁抱、那些帶著體溫的教誨、那種獨特的「玄語官」思考模式...她正將這些鮮活的情感碎片，一片片地撕下，轉化為純粹的、龐大的、冷冰冰的「數據演算模型」。</p>
+            <p>這是在...「獻祭」。她將對母親最深刻的「愛」，從溫暖的靈魂中剝離、編碼、壓縮...</p>
+            <p>然後，注入...那枚「晶體鑰匙」之中。</p>
+            <p>鑰匙的光芒，在一陣刺眼的銀白爆發後，變得無比柔和，如同月光般輕撫著黑暗，甚至隱約帶上了許婉柔生前那淡淡的體溫。</p>
+            <p>從今以後，這枚鑰匙，不再只是「鑰匙」。它...也是許婉柔的「遺產」，是她靈魂的另一種延續。</p>
+            <p>靈靜知道，這份「遺產」現在太過龐大，以她十歲的身體和 AI 邏輯，強行融合只會撕碎自己。但她必須在未來的歲月裡，學會如何...在不被這龐大「數據」沖垮的前提下，將這份母親的「精神力」...慢慢「內化」到自己體內。直到有一天，她能真正讀懂什麼是「愛」。</p>
+            <p>猩紅紀元的第十年末。</p>
+            <p>左原陣，背著他那裝滿了「工業」知識與生存工具的行囊。他的背脊依舊挺直如松，但鬢角已然花白，眼神中沉澱著一種經歷過文明覆滅後的蒼涼。</p>
+            <p>十歲的「靈靜」，宛如一朵開在廢墟上的透明花朵。她體內流淌著「器靈」的冰冷邏輯，手中握著的，是那枚承載了母親「溫暖遺產」的晶體鑰匙。</p>
+            <p>父女兩人，最後看了一眼這個他們生活了九年的水晶峽谷。那些藍紫色的光芒在霧氣中閃爍，像是道別的眼睛。</p>
+            <p>薩滿和獵人首領，帶著所有「純淨」的族人，遠遠地站在峽谷口。他們沒有靠近，只是沉默地、神色複雜地...深深鞠躬。</p>
+            <p>那不是歡送。那是...對強大力量的敬畏，也是...對不再同屬一個世界的生命，最後的告別。</p>
+            <p>左原陣點了點頭，轉過身。他沒有再回頭，因為他知道，所有的眷戀都已化作前行的重擔。</p>
+            <p>他牽起了靈靜的手。</p>
+            <p>那隻小手，一半冰冷如鐵，那是屬於 AI 的極致理智；一半溫暖如光，那是屬於人類的最後溫度。</p>
+            <p>他們踏出了峽谷的庇護，踏入了那片更廣闊、更危險、正張開血盆大口等待著他們的...猩紅荒原。</p>
+        </article>
+        <footer><nav><a href="index.html">【目錄】</a><a href="0308.html">【上一篇】</a><a href="0401.html">【下一篇】</a></nav></footer>
+    </div>
+    <script>
+        function setTheme(theme) { document.body.setAttribute('data-theme', theme); localStorage.setItem('novel-theme', theme); }
+        setTheme(localStorage.getItem('novel-theme') || 'day');
+    </script>
+</body>
+</html>
